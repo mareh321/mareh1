@@ -1,13 +1,26 @@
-﻿#define _USE_MATH_DEFINES 
+#define _USE_MATH_DEFINES 
 
 #include <stdio.h>
 #include <math.h>
-
+/**
+* @brief Рассчитывает значение функции B по заданой формуле
+* param x - значение параметра x
+* param y - значение параметра y
+* param z - значение параметра z
+* return рассчитанное значение
+*/
 double getB(const double x, const double y, const double z);
+/**
+* @brief Рассчитывает значение функции A по заданой формуле
+* param x - значение параметра x
+* param y - значение параметра y
+* param z - значение параметра z
+* return рассчитанное значение
+*/
 double getA(const double x, const double y, const double z);
 /**
 * @brief Точка входа в программу
-* @
+* @return значение
 */
 int main()
 
