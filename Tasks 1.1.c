@@ -20,7 +20,7 @@ double getB(const double x, const double y, const double z);
 double getA(const double x, const double y, const double z);
 /**
 * @brief Точка входа в программу
-* @return значение
+* @return Возвращает 0, если программа выполнена корректно
 */
 int main()
 
@@ -36,9 +36,9 @@ int main()
 double getB(const double x, const double y, const double z)
 {
 
-	return	y*cos(cos(x*z*sin(sin(y)))) + 3;
+	return	y * cos(cos(x * z * sin(sin(y)))) + 3;
 }
 double getA(const double x, const double y, const double z)
 {
-	return cbrt((x*y*z + fabs(y)));
+	return cbrt((x * y * z + fabs(y)));
 }
