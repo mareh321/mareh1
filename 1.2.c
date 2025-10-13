@@ -7,14 +7,14 @@
 * param x - значение второй стороны
 * return рассчитанная площадь
 */
-double getA(double st1, double st2);
+double getPloshad_treug(double st1, double st2);
 /**
 * @brief Рассчитывает площадь прямоугольника по заданой формуле
 * param x - значение первой стороны
 * param x - значение второй стороны
 * return рассчитанная площадь
 */
-double getB(double st1, double st2);
+double getPloshad_pryamoug(double st1, double st2);
 /**
 * @brief Точка входа в программу
 * @return Возвращает 0, если программа выполнена корректно
@@ -33,14 +33,14 @@ int main() {
     
 }
 
-double getA(double st1, double st2) {
+double getPloshad_treug(double st1, double st2) {
     printf("Площадь треугольника - ");
     printf("%.2lf", st1 * st2 * 0.5);
-    return 0;
+    
 }
 
-double getB(double st1, double st2) {
+double getPloshad_pryamoug(double st1, double st2) {
     printf("Площадь прямоугольника - ");
     printf("%.2lf", st1 * st2);
-    return 0;
+    
 }
