@@ -8,7 +8,7 @@
 * param Q - значение
 * return рассчитанная площадь
 */
-double getA(double R, double I, double Q);
+double getZakonOma(double R, double I, double Q);
 /**
 * @brief Точка входа в программу
 * @return Возвращает 0, если программа выполнена корректно
@@ -25,6 +25,6 @@ int main() {
 	printf("%.2lf",getA(R, I, Q));
 	return 0;
 }
-double getA(double R, double I, double Q){
+double getZakonOma(double R, double I, double Q){
 	return ((Q*I*I)/R);
 }
