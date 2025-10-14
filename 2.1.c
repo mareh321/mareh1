@@ -6,14 +6,14 @@
 * param number2 - значение второго числа
 * return рассчитанное значение
 */
-double getA(double number1, double number2);
+double getSrArifm(double number1, double number2);
 /**
 * @brief Рассчитывает геометрическое модулей этих чисел
 * param number1 - значение первого числа
 * param number2 - значение второго числа
 * return рассчитанное значение
 */
-double getB(double number1, double number2);
+double getSrGeom(double number1, double number2);
 /**
  * @brief считывает значение,
  * введенное с клавиатуры с проверкой ввода
@@ -36,11 +36,11 @@ int main() {
     return 0;
 }
 
-double getA(double number1, double number2) {
+double getSrArifm(double number1, double number2) {
     printf("Среднее арифметическое кубов этих чисел: ");
     return (pow(number1, 3) + pow(number2, 3)) / 2.0;
 }
-double getB(double number1, double number2) {
+double getSrGeom(double number1, double number2) {
     printf("Среднее геометрическое модулей этих чисел: ");
     return pow(fabs(number1 * number2), 0.5);
 }
