@@ -13,7 +13,7 @@ double getValue();
 */
 int main() {
 	setlocale(LC_ALL, "Russian");	
-	double st1, st2, st3;
+	double st1 = 0, st2 = 0, st3 = 0;
 	
 	printf("Первая сторона\n");
 	double st1 = getValue();
