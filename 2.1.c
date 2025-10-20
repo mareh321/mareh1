@@ -6,21 +6,24 @@
 * param number2 - значение второго числа
 * return рассчитанное значение
 */
-double getSrArifm(double number1, double number2);
+double getSrArifm(const double number1,const double number2);
 /**
 * @brief Рассчитывает геометрическое модулей этих чисел
 * param number1 - значение первого числа
 * param number2 - значение второго числа
 * return рассчитанное значение
 */
-double getSrGeom(double number1, double number2);
+double getSrGeom(const double number1,const double number2);
 /**
  * @brief считывает значение,
  * введенное с клавиатуры с проверкой ввода
  * @return считанное значение
  */
 double getValue();
-
+/**
+* @brief Точка входа в программу
+* @return Возвращает 0, если программа выполнена корректно
+*/
 int main() {
     double const number1, number2;
 
