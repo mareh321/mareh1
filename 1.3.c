@@ -8,7 +8,7 @@
 * param Q - значение
 * return рассчитанная площадь
 */
-double getZakonOma(double R, double I, double Q);
+double getZakonOma(const double R,const double I,const double Q);
 /**
 * @brief Точка входа в программу
 * @return Возвращает 0, если программа выполнена корректно
