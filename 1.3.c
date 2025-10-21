@@ -25,6 +25,6 @@ int main() {
 	printf("%.2lf",getA(R, I, Q));
 	return 0;
 }
-double getZakonOma(double R, double I, double Q){
+double (const double R,const double I,const double Q){
 	return ((Q*I*I)/R);
 }
