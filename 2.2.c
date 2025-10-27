@@ -13,13 +13,17 @@ double getRezultat(double numb1);
  * @return считанное значение
  */
 double getValue();
+/**
+ * @brief считывает значение,
+ * введенное с клавиатуры с проверкой ввода
+ * @return считанное значение
+ */
 int main() {
 	setlocale(LC_ALL, "Russian");
-	double numb1;
 	printf("Введите ваше число -\n");
 	double numb1 = getValue();
 	if ((numb1 < 4.0 * 2.1 * numb1 + pow(numb1, 3)) && (numb1 >= 4)) {
-		printf("%lf", getA(numb1));
+		printf("%lf", getRezultat(numb1));
 	}
 	else {
 		printf("Не подходит по условию");
