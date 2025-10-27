@@ -15,7 +15,7 @@ double getZakonOma(const double R,const double I,const double Q);
 */
 int main() {
 	setlocale(LC_ALL, "Russian");
-	double R, I, Q;
+	double R = 0, I = 0, Q = 0;
 	printf("Сопротивление -");
 	scanf_s("\n%lf", &R);
 	printf("Сила тока -");
