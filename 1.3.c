@@ -22,9 +22,9 @@ int main() {
 	scanf_s("\n%lf", &I);
 	printf("Количество теплоты -");
 	scanf_s("%lf", &Q);
-	printf("%.2lf",getA(R, I, Q));
+	printf("%.2lf",getZakonOma(R, I, Q));
 	return 0;
 }
-double (const double R,const double I,const double Q){
+double getZakonOma(const double R,const double I,const double Q){
 	return ((Q*I*I)/R);
 }
