@@ -34,8 +34,8 @@ int main() {
     printf("Введите второе число: ");
     double number2 = getValue();
 
-    printf("%lf\n", getA(number1, number2));
-    printf("%lf\n", getB(number1, number2));
+    printf("%lf\n", getSrArifm(number1, number2));
+    printf("%lf\n", getSrGeom(number1, number2));
     return 0;
 }
 
