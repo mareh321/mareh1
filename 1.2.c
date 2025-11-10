@@ -33,13 +33,13 @@ int main() {
     
 }
 
-double getPloshad_treug(double st1, double st2) {
+double getPloshad_treug(const double st1,const double st2) {
     printf("Площадь треугольника - ");
     printf("%.2lf", st1 * st2 * 0.5);
     
 }
 
-double getPloshad_pryamoug(double st1, double st2) {
+double getPloshad_pryamoug(const double st1,const double st2) {
     printf("Площадь прямоугольника - ");
     printf("%.2lf", st1 * st2);
     
