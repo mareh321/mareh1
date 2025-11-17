@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
+
 /**
 * @brief Рассчитывает время по заданной формуле
 * param R - значение сопротивления
