@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
+#include <stdlib.h>
 /**
  * @brief считывает значение,
  * введенное с клавиатуры с проверкой ввода
@@ -12,8 +13,8 @@ double getValue();
 * @return Возвращает 0, если программа выполнена корректно
 */
 int main() {
-	setlocale(LC_ALL, "Russian");	
-	
+	setlocale(LC_ALL, "Russian");
+
 	printf("Первая сторона\n");
 	double st1 = getValue();
 	printf("Вторая сторона\n");
@@ -40,13 +41,13 @@ int main() {
 	else {
 		printf("Треугольник не прямоугольный");
 	}
-	
+
 	return 0;
 }
 double getValue()
 {
 	double value = 0;
-	if (!scanf("%lf", &value))
+	if (!scanf_s("%lf", &value))
 	{
 		printf("Error\n");
 		abort();
