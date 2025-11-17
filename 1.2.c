@@ -28,9 +28,9 @@ int main() {
 
     printf("Вторая сторона - ");
     scanf_s("%lf", &st2);
-    getA(st1, st2);
-    getB(st1, st2);
-    
+    getPloshad_treug(st1, st2);
+    getPloshad_pryamoug(st1, st2);
+    return 0;
 }
 
 double getPloshad_treug(const double st1,const double st2) {
@@ -40,7 +40,7 @@ double getPloshad_treug(const double st1,const double st2) {
 }
 
 double getPloshad_pryamoug(const double st1,const double st2) {
-    printf("Площадь прямоугольника - ");
+    printf("\nПлощадь прямоугольника - ");
     printf("%.2lf", st1 * st2);
     
 }
