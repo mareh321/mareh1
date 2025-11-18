@@ -2,10 +2,33 @@
 #include <math.h>
 #include <stdlib.h>
 #include <locale.h>
+/**
+ * @brief рассчитывает значение функции y по заданной формуле
+ * @param x значение
+ * @return
+ */
 double getUravn(const double x);
+/**
+ * @brief считывает значение,
+ * введенное с клавиатуры с проверкой ввода
+ * @return считанное значение
+ */
 double getValue();
+/**
+ * @brief считывает значение,
+ * введенное с клавиатуры с проверкой ввода
+ * @return заканчивает работу программы, если значение не подходит под условие
+ */
 void getProverka(const double x);
+/**
+ * @brief проверяет,что переменная положительная
+ * @param step значение проверяемой переменной
+ */
 void checkStep(const double step);
+/**
+* @brief Точка входа в программу
+* @return Возвращает 0, если программа выполнена корректно
+ */
 int main() {
 	setlocale(LC_ALL, "Russian");
 	printf("ВВедите левую границу");
