@@ -39,7 +39,6 @@ int main() {
     printf("%lf\n", getSrGeom(number1, number2));
     return 0;
 }
-
 double getSrArifm(const double number1, const double number2) {
     printf("Среднее арифметическое кубов этих чисел: ");
     return ((pow(number1, 3) + pow(number2, 3)) / 2.0);
