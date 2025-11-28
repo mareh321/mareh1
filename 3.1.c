@@ -7,7 +7,7 @@
  * @param x значение
  * @return
  */
-double getUravn(const double x);
+double getEquation(const double x);
 /**
  * @brief считывает значение,
  * введенное с клавиатуры с проверкой ввода
@@ -17,14 +17,14 @@ double getValue();
 /**
  * @brief считывает значение,
  * введенное с клавиатуры с проверкой ввода
- * @return заканчивает работу программы, если значение не подходит под условие
+ * @return выводит, что точка не подходит, если значение не подходит под условие
  */
-void getProverka(const double x);
+int getCheck(const double x);
 /**
  * @brief проверяет,что переменная положительная
  * @param step значение проверяемой переменной
  */
-void checkStep(const double step);
+void checkStepandGap(const double step, const double start, const double end);
 /**
 * @brief Точка входа в программу
 * @return Возвращает 0, если программа выполнена корректно
@@ -39,20 +39,18 @@ int main() {
 	printf("Введите шаг, используя запятую, а не точку:");
 	double step = getValue();
 
-	checkStep(step);
+	checkStepandGap(step,start,end);
 	for (double i = start; i <= end + step; i += step) {
-		if (log(i) <= 0) {
-			printf("\nНет решения при значении x =");
-			printf("%lf", i);
+		if (getCheck(i)) {
 		}
 		else {
 			printf("\nПри х = %lf, значение функции = ", i);
-			printf("%lf", getUravn(i));
+			printf("%lf", getEquation(i));
 
 		}
 	}
 }
-double getUravn(const double x)
+double getEquation(const double x)
 {
 	return	(0.1 * pow(x, 2) - x * log(log(x)));
 }
@@ -67,17 +65,19 @@ double getValue() {
 	}
 
 }
-void getProverka(const double x) {
-	if (log(x) <= 0) {
+int getCheck(const double x) {
+	if ((log(x) <= 0) || (x <= 0)) {
 		printf("\nНет решения при значении x =");
 		printf("%lf", x);
+		return 1;
 	}
+	return 0;
 }
-void checkStep(const double step)
+void checkStepandGap(const double step, const double start, const double end)
 {
-	if (step <= 0)
+	if ((step <= 0) || (start >= end))
 	{
-		printf("\nОшибка, шаг должен быть положительным");
+		printf("\nError");
 		abort();
 	}
 }
