@@ -6,12 +6,8 @@
  * @brief Считывает введённое с клавиатуры целое значение и проверяет на правильность ввода
  * @return введённое значение
  */
-int Value();
-/**
- * @brief считывает значение, введенное с клавиатуры с проверкой ввода
- * @return считанное значение
- */
-double getValue();
+int Value();   
+
 /**
  * @brief Выводит текстовое сообщение о необходимости ввода размера массива, проверяет ввод на правильность, задаёт размер массива
  * @param message текстовое сообщение о необходимости ввода массива
@@ -91,9 +87,10 @@ int main()
         break;
         exit(1);
     }
-    printf("\nВведите число A - ");
-    double A = getValue();
+    printf("\nИсходный массив - ");
     printArray(arr, size);
+    printf("\nВведите число A - ");
+    int A = Value();
     printf("\nКолличество чисел <= A и > 0 - %d", Quantity(arr, size, A));
     printf("\nСумма отриц - %d", sumOtric(arr, size));
     Number(arr, size);
@@ -174,9 +171,9 @@ int sumOtric(int* arr, const size_t size)
 
 void fillRandom(int* arr, const size_t size)
 {
-    printf("diapozon start ");
+    printf("Левая граница ");
     int start = Value();
-    printf("diapozon end ");
+    printf("Правая граница ");
     int end = Value();
     if (start > end) {
         printf("Левая граница больше правой !\nError");
@@ -203,18 +200,7 @@ void Number(const int* arr, const size_t size)
         
     }
     else {
-        printf("\nНомера последних элементов с разными знаками - %d", res);
+        printf("\nНомер последних элементов с разными знаками - %d", res);
     }
     
-}
-double getValue() {
-    double value = 0;
-    if (!scanf_s("%lf", &value)) {
-        printf("\nError");
-        abort();
-    }
-    else {
-        return value;
-    }
-
 }
