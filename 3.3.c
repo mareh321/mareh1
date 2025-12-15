@@ -56,7 +56,7 @@ int main()
     printf("Введите e -  ");
     double e = getValue();
     checkPositive(e);
-    for (double x = min; x <= max ; x += step)
+    for (double x = min; x <= max+step ; x += step)
     {
         printf("x = %lf,(x) = %lf, S = %lf\n", x,x, getSumE(e, x));
     }
@@ -76,7 +76,7 @@ double getValue()
 
 void check(const double min, const double max)
 {
-    if (min >= max)
+    if (min > max)
     {
         printf("Ошибка, левая граница должна быть меньше правой!\n");
         exit(1);
