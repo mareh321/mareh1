@@ -304,14 +304,10 @@ int newmass(int* arr, const size_t size, const int k)
 }
 void checkArray(const int* arr, const size_t size)
 {
-    if (arr == NULL)
+    if (arr == NULL || size == 0)
     {
-        printf("Error: массив не выделен (NULL)\n");
+        printf("\nError");
         abort();
     }
-    if (size == 0)
-    {
-        printf("Error: размер массива равен 0\n");
-        abort();
-    }
+    
 }
