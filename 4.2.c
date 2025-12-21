@@ -8,7 +8,12 @@
  * @return введённое значение
  */
 int Value();
-
+/**
+ * @brief Проверяет корректность массива: что указатель не NULL и размер больше 0
+ * @param arr массив
+ * @param size размер массива
+ */
+void checkArray(const int* arr, const size_t size);
 /**
  * @brief Выводит текстовое сообщение о необходимости ввода размера массива, проверяет ввод на правильность, задаёт размер массива
  * @param message текстовое сообщение о необходимости ввода массива
@@ -38,6 +43,7 @@ void fillRandom(int* arr, const size_t size);
  * @brief RANDOM - заполнение массива случайными числами в пределах введённого пользователем диапазона
  * @brief MANUAL - заполнение массива вручную
  */
+
 enum { RANDOM = 1, MANUAL };
 /**
  * @brief Создаёт копию массива
@@ -114,11 +120,7 @@ int main()
     printArray(arr, size);
     printf("\nМассив после второго действия - ");
     int* tmp = pasteK(arr, size, K, &newsize);
-    if (tmp == NULL)
-    {
-        printf("error");
-        exit(1);
-    }
+    void checkArray(tmp, newsize);
     free(arr);
     arr = tmp;     
     printArray(arr, newsize);
@@ -193,11 +195,7 @@ void fillRandom(int* arr, const size_t size)
 int* copyArray(const int* arr, const size_t size)
 {
     int* copyArr = malloc(sizeof(int) * size);
-    if (copyArr == NULL)
-    {
-        printf("Ошибка!\n");
-        exit(1);
-    }
+    checkArray(copyArr, size);
     for (size_t i = 0; i < size; i++)
     {
         copyArr[i] = arr[i];
@@ -230,7 +228,8 @@ int replaceAbs(int* arr, const size_t size)
 int* pasteK(int* copyArr, const size_t size, const int K, size_t* outSize)
 {
     if (!copyArr || !outSize)
-        return NULL;
+    
+        
 
     if (size < 2)
     {
@@ -246,8 +245,10 @@ int* pasteK(int* copyArr, const size_t size, const int K, size_t* outSize)
     
     size_t a = 0;
     int* b = calloc(size, sizeof(int));
-    if (!b) return NULL;
-
+    if (!b) 
+    {
+        return NULL;
+    }
     for (size_t i = 0; i < size - 1; i++)
     {
         if (((copyArr[i] < 0) && (copyArr[i + 1] >= 0)) ||
@@ -300,4 +301,17 @@ int newmass(int* arr, const size_t size, const int k)
         }
     }
     return 0;
+}
+void checkArray(const int* arr, const size_t size)
+{
+    if (arr == NULL)
+    {
+        printf("Error: массив не выделен (NULL)\n");
+        abort();
+    }
+    if (size == 0)
+    {
+        printf("Error: размер массива равен 0\n");
+        abort();
+    }
 }
