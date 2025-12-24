@@ -89,11 +89,7 @@ int main()
     setlocale(LC_ALL, "Russian");
     size_t size = getSize("Введите размер массива:  ");
     int* arr = malloc(size * sizeof(int));
-    if (arr == NULL)
-    {
-        printf("error");
-        exit(1);
-    }
+    checkArray(arr,size);
     printf("Выберите способ заполнения массива:\n"
         "%d случайными числами \n%d вручную\nВыбор -   ", RANDOM, MANUAL);
     int choice = Value();
@@ -120,7 +116,7 @@ int main()
     printArray(arr, size);
     printf("\nМассив после второго действия - ");
     int* tmp = pasteK(arr, size, K, &newsize);
-    void checkArray(tmp, newsize);
+    checkArray(tmp, newsize);
     free(arr);
     arr = tmp;     
     printArray(arr, newsize);
